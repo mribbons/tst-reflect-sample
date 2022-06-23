@@ -2,6 +2,9 @@ import { getType } from "tst-reflect";
 
 export default interface IService
 {
+    /**
+     * @reflect
+     */
     typedMethod<T>(a: any): void
 }
 
