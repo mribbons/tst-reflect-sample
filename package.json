@@ -1,0 +1,21 @@
+{
+  "name": "tst-reflect-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf tsbuild && rimraf tsconfig.tsbuildinfo",
+    "start": "node index.js",
+    "build": "yarn clean && yarn compile",
+    "compile": "tsc --build",
+    "prepare": "ts-patch install -s"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "ts-patch": "^2.0.1",
+    "tst-reflect-transformer": "^0.9.10"
+  },
+  "dependencies": {
+    "tst-reflect": "^0.7.5"
+  }
+}
