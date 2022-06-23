@@ -9,13 +9,16 @@ export class Service implements IService
 {
     printTypeProperties<TType>()
     {
-        const type = getType<TType>(); // <<== get type of generic TType
-        
-        console.log(type.getProperties().map(prop => prop.name + ": " + prop.type.name).join("\n"));
+      const type = getType<TType>(); // <<== get type of generic TType
+      
+      console.log(type.getProperties().map(prop => prop.name + ": " + prop.type.name).join("\n"));
     }
 
     typedMethod<T>(a: any): void {
-        this.printTypeProperties<T>();
+      const type = getType<T>();
+      console.log(`type.name: ${type.name}`);
+
+      this.printTypeProperties<T>();
     }
 }
 
